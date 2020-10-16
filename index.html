@@ -6,6 +6,34 @@
 -->
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180715555-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-180715555-1');
+		</script>
+
+		<script>
+			/**
+			* Function that registers a click on an outbound link in Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+			* using 'navigator.sendBeacon' in browser that support it.
+			*/
+			const getOutboundLink = function(url) {
+				gtag('event', 'click', {
+					'event_category': 'outbound',
+					'event_label': url,
+					'transport_type': 'beacon',
+					'event_callback': function(){document.location = url;}
+				});
+			}
+		</script>
+
+
 		<title>Khai Yuan Liew</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -47,14 +75,14 @@
 						</p>
 
 						<ul class="icons links-list">
-							<li><a href="https://github.com/kliewUS" class="icon brands alt fa-github" id="link-item"><p>Github</p></a></li>
-							<li><a href="https://www.linkedin.com/in/khai-yuan-liew-397600143/" class="icon brands alt fa-linkedin" id="link-item"><p>LinkedIn</p></a></li>
-							<li><a href="https://angel.co/u/khai-yuan-liew" class="icon brands alt fa-angellist" id="link-item"><p>AngelList</p></a></li>
-							<li><a href="mailto:kyuliew@gmail.com" class="icon solid alt fa-envelope" id="link-item"><p>Email</p></a></li>
+							<li><a href="https://github.com/kliewUS" class="icon brands alt fa-github" id="link-item" onclick="getOutboundLink('https://github.com/kliewUS');"><p>Github</p></a></li>
+							<li><a href="https://www.linkedin.com/in/khai-yuan-liew-397600143/" class="icon brands alt fa-linkedin" id="link-item" onclick="getOutboundLink('https://www.linkedin.com/in/khai-yuan-liew-397600143/');"><p>LinkedIn</p></a></li>
+							<li><a href="https://angel.co/u/khai-yuan-liew" class="icon brands alt fa-angellist" id="link-item" onclick="getOutboundLink('https://angel.co/u/khai-yuan-liew');"><p>AngelList</p></a></li>
+							<li><a href="mailto:kyuliew@gmail.com" class="icon solid alt fa-envelope" id="link-item" onclick="getOutboundLink('mailto:kyuliew@gmail.com');"><p>Email</p></a></li>
 						</ul>
 
 						<ul class="actions fit">
-							<li><a href="./assets/resume.pdf" class="button primary icon solid fa-download">Resume</a></li>
+							<li><a href="./assets/resume.pdf" class="button primary icon solid fa-download" onclick="getOutboundLink('./assets/resume.pdf');">Resume</a></li>
 						</ul>
 					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
@@ -82,8 +110,8 @@
 
 						
 						<ul class="actions">
-							<li><a href="https://todollo.herokuapp.com/#/" class="button">View</a></li>
-							<li><a href="https://github.com/kliewUS/Todollo" class="button">Github</a></li>
+							<li><a href="https://todollo.herokuapp.com/#/" class="button" onclick="getOutboundLink('https://todollo.herokuapp.com/#/');">View</a></li>
+							<li><a href="https://github.com/kliewUS/Todollo" class="button" onclick="getOutboundLink('https://github.com/kliewUS/Todollo');">Github</a></li>
 						</ul>
 						
 						<h3>Meterods</h3>
@@ -96,8 +124,8 @@
 						</p>
 
 						<ul class="actions">
-							<li><a href="https://github.com/kliewUS/meteords" class="button">Play</a></li>
-							<li><a href="https://kliewus.github.io/meteords/" class="button">Github</a></li>
+							<li><a href="https://github.com/kliewUS/meteords" class="button" onclick="getOutboundLink('https://github.com/kliewUS/meteords');">Play</a></li>
+							<li><a href="https://kliewus.github.io/meteords/" class="button" onclick="getOutboundLink('https://kliewus.github.io/meteords/');">Github</a></li>
 						</ul>
 
 						<h3>SafeTravels</h3>
@@ -111,8 +139,8 @@
 						</p>
 
 						<ul class="actions">
-							<li><a href="http://safe-travels-aa.herokuapp.com/#/" class="button">View</a></li>
-							<li><a href="https://github.com/Mtolentin/SafeTravels" class="button">Github</a></li>
+							<li><a href="http://safe-travels-aa.herokuapp.com/#/" class="button" onclick="getOutboundLink('http://safe-travels-aa.herokuapp.com/#/');">View</a></li>
+							<li><a href="https://github.com/Mtolentin/SafeTravels" class="button" onclick="getOutboundLink('https://github.com/Mtolentin/SafeTravels');">Github</a></li>
 						</ul>
 
 					</div>
@@ -216,17 +244,17 @@
 					</header>
 					<div class="content">
 						<ul class="actions fit">
-							<li><a href="./assets/resume.pdf" class="button primary">Resume</a></li>
-							<li><a href="mailto:kyuliew@gmail.com" class="button">Email</a></li>
+							<li><a href="./assets/resume.pdf" class="button primary" onclick="getOutboundLink('./assets/resume.pdf');">Resume</a></li>
+							<li><a href="mailto:kyuliew@gmail.com" class="button" onclick="getOutboundLink('mailto:kyuliew@gmail.com');">Email</a></li>
 						</ul>
 					</div>
 				</div>
 				<footer>
 					<ul class="icons">
-						<li><a href="https://github.com/kliewUS" class="icon brands alt fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/khai-yuan-liew-397600143/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://angel.co/u/khai-yuan-liew" class="icon brands alt fa-angellist"><span class="label">AngelList</span></a></li>
-						<li><a href="mailto:kyuliew@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/kliewUS" class="icon brands alt fa-github" onclick="getOutboundLink('https://github.com/kliewUS');" ><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/khai-yuan-liew-397600143/" class="icon brands alt fa-linkedin" onclick="getOutboundLink('https://www.linkedin.com/in/khai-yuan-liew-397600143/');"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://angel.co/u/khai-yuan-liew" class="icon brands alt fa-angellist" onclick="getOutboundLink('https://angel.co/u/khai-yuan-liew');"><span class="label">AngelList</span></a></li>
+						<li><a href="mailto:kyuliew@gmail.com" class="icon solid alt fa-envelope" onclick="getOutboundLink('mailto:kyuliew@gmail.com');"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Khai Yuan Liew</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
