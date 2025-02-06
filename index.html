@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180715555-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-180715555-1');
+		</script>
+
+		<script>
+			/**
+			* Function that registers a click on an outbound link in Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+			* using 'navigator.sendBeacon' in browser that support it.
+			*/
+			const getOutboundLink = function(url) {
+				gtag('event', 'click', {
+					'event_category': 'outbound',
+					'event_label': url,
+					'transport_type': 'beacon',
+					'event_callback': function(){document.location = url;}
+				});
+			}
+		</script>
+
+
+		<title>Khai Yuan Liew</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+		<link rel="manifest" href="images/favicons/site.webmanifest">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header class="major">
+
+					<h1>Khai Yuan Liew</h1>
+					<p>Software Engineer</a></p>
+				</header>
+				<div class="container">
+					<ul class="actions special">
+						<li><a href="#one" class="button primary scrolly">Learn More</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<span class="image fit"><img class="profile-avatar" src="images/avatar.png" alt="" /></span>
+							<h2>About</h2>
+						</header>
+						<p>
+							I am a software engineer with a passion for developing innovative products. I have experience developing backend projects with the usage of Python, Java, Spring Boot, Ruby on Rails and frontend projects with the usage of Javascript, React/Redux, HTML, and CSS.
+
+							In my free time, I like to create artworks using pencil and three-dimensional software and I like to take walks on my local park for a breath of fresh air and exercise.
+						</p>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic02.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Experience</h2>
+						</header>
+
+						<h3>Nisum - Software Developer</h3>
+						<h4>2021 - 2023</h4>						
+						<hr/>
+
+						<ul>
+							<li>Implemented new endpoints using Java and Spring Boot such as store registration and elastic account deletion and enhanced existing endpoints such as profile search, and saving preferences and addresses, delivering responsive features in a timely manner. </li>
+							<li>Refactored Java and Spring code logic for customer registration, sign in, and account management functionality, providing an improved user experience for the client.</li>
+							<li>Created new unit and component test cases with JUnit and Mockito, ensuring 90% microservice code coverage and bug-free releases.</li>
+							<li>Troubleshooted and debugged bugs with Java in the microservice codebase and deploying the bug fixes when necessary to ensure microservice uptime and performance </li>
+							<li>Collaborated with team members using Jira and agile workflow and participated in scrum meetings, daily standups, and sprint planning, ensuring all team members are kept updated on current progress in every sprint.</li>
+						</ul>
+
+						<header class="major">
+							<h2>Projects</h2>
+						</header>
+
+						<h3>Todollo</h3>
+						<hr/>
+
+						<div class="col-12"><span class="image fit"><img src="https://user-images.githubusercontent.com/23514798/94644049-0e6bd100-029d-11eb-9f94-9c5b65d7e062.png" alt="" /></span></div>
+						<p>
+						A site where users can create their own boards to manage their projects.
+						Users can also add in lists, cards, and labels to further organize their boards.
+						Inspired by Trello. Built with Javascript, React, Redux, Ruby on Rails, PostgresSQL, CSS3.	
+						</p>
+
+						
+						<ul class="actions">
+							<li><a href="https://todollo.herokuapp.com/#/" class="button" onclick="getOutboundLink('https://todollo.herokuapp.com/#/');">View</a></li>
+							<li><a href="https://github.com/kliewUS/Todollo" class="button" onclick="getOutboundLink('https://github.com/kliewUS/Todollo');">Github</a></li>
+						</ul>
+						
+						<h3>Meterods</h3>
+						<hr/>
+						
+						<div class="col-12"><span class="image fit"><img src="https://gist.githubusercontent.com/kliewUS/049d8cfda828ab0fe5a9caaf7270c6aa/raw/9918ab3995ef944523010d2595bbc8a31c2f419b/61gsj0IAzt.jpg" alt="" /></span></div>
+						<p>
+						A browser-based game where the user has to shoot down the meteors before they hit the ground.
+						Built with Javascript, CSS3, and HTML5 Canvas.
+						</p>
+
+						<ul class="actions">
+							<li><a href="https://github.com/kliewUS/meteords" class="button" onclick="getOutboundLink('https://github.com/kliewUS/meteords');">Play</a></li>
+							<li><a href="https://kliewus.github.io/meteords/" class="button" onclick="getOutboundLink('https://kliewus.github.io/meteords/');">Github</a></li>
+						</ul>
+
+						<h3>SafeTravels</h3>
+						<hr/>
+
+						<div class="col-12"><span class="image fit"><img src="https://gist.githubusercontent.com/kliewUS/049d8cfda828ab0fe5a9caaf7270c6aa/raw/9918ab3995ef944523010d2595bbc8a31c2f419b/firefox_7IpS1t2doX.jpg" alt="" /></span></div>
+						<p>
+						An application where San Francisco residents and visitors can look up establishments and popular areas that are open during the pandemic.
+						Users can also post news articles to keep other users updated as well as provide feedback to the articles.
+						Built with Javascript, MongoDB, Express, React, Node, and Google Maps API.
+						</p>
+
+						<ul class="actions">
+							<li><a href="http://safe-travels-aa.herokuapp.com/#/" class="button" onclick="getOutboundLink('http://safe-travels-aa.herokuapp.com/#/');">View</a></li>
+							<li><a href="https://github.com/Mtolentin/SafeTravels" class="button" onclick="getOutboundLink('https://github.com/Mtolentin/SafeTravels');">Github</a></li>
+						</ul>
+
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Skills</h2>
+						</header>
+
+						<ul class="icons-grid skills-list">
+							<li>
+								<i class="devicon-python-plain colored"></i>
+								<h3>Python</h3>
+							</li>	
+							<li>
+								<i class="devicon-java-plain colored"></i>
+								<h3>Java</h3>
+							</li>														
+							<li>
+								<i class="devicon-javascript-plain colored"></i>
+								<h3>Javascript</h3>
+							</li>
+							<li>
+								<i class="devicon-react-original colored"></i>
+								<h3>React-Redux</h3>
+							</li>
+							<li>
+								<i class="devicon-rails-plain colored"></i>
+								<h3>Ruby on Rails</h3>
+							</li>
+							<li>
+								<i class="devicon-html5-plain colored"></i>
+								<h3>HTML5</h3>
+							</li>
+							<li>
+								<i class="devicon-css3-plain colored"></i>
+								<h3>CSS3</h3>
+							</li>
+							<li>
+								<i class="devicon-nodejs-plain colored"></i>
+								<h3>Node.js</h3>
+							</li>
+							<li>
+								<i class="devicon-github-plain colored"></i>
+								<h3>Github</h3>
+							</li>
+							<li>
+								<i class="devicon-git-plain colored"></i>
+								<h3>Git</h3>
+							</li>
+							<li>
+								<i class="devicon-postgresql-plain colored"></i>
+								<h3>PostgreSQL</h3>
+							</li>														
+						</ul>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<!-- Four -->
+			<section id="four" class="main">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>Education</h2>
+						</header>
+
+
+						<h3>App Academy</h3>
+						<h4>Summer 2020</h4>
+						<p><span class="image left edu-icon"><img src="images/aa.png" alt="" /></span>An immersive software development class with an emphasis on full-stack engineering, which amounted to about 1000+ hours of coding.</p>
+						<h3>​University of California, Merced</h3>
+						<h4>2015 - 2019</h4>
+						<p><span class="image left"><img src="images/ucm.jpg" alt="" /></span>Bachelors of Science in Computer Science and Engineering</p>
+					</div>
+					<a href="#footer" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+	
+		<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<header class="major">
+						<h2>Contact Me</h2>						
+					</header> 
+					<div class="content">
+						<ul class="actions fit">
+						<li><a href="https://github.com/kliewUS" class="button primary" onclick="getOutboundLink('https://github.com/kliewUS');" >Github</a></li>
+						<li><a href="https://www.linkedin.com/in/khai-yuan-liew-397600143/" class="button primary" onclick="getOutboundLink('https://www.linkedin.com/in/khai-yuan-liew-397600143/');">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+				<footer>
+					<ul class="copyright">
+						<li>&copy; Khai Yuan Liew</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
